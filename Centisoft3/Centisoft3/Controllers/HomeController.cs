@@ -15,16 +15,16 @@ namespace Centisoft3.Controllers
 			return View();
 		}
 
-		public IActionResult About()
+		public IActionResult Clients()
 		{
-			ViewData["Message"] = "Your application description page.";
+			ViewData["Message"] = "Clients";
 
 			return View();
 		}
 
-		public IActionResult Contact()
+		public IActionResult Developers()
 		{
-			ViewData["Message"] = "Your contact page.";
+			ViewData["Message"] = "Developers";
 
 			return View();
 		}

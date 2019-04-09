@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Centisoft3.Controllers
 {
-	[Authorize]
+	
     public class ClientsController : Controller
     {
         private readonly DataContext _context;

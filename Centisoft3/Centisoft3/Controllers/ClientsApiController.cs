@@ -6,10 +6,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Centisoft3.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Centisoft3.Helpers;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 namespace Centisoft3.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/clients")]
+	[ServiceFilter(typeof(TokenValidationAttribute))]
     [ApiController]
     public class ClientsApiController : ControllerBase
     {
@@ -121,5 +128,7 @@ namespace Centisoft3.Controllers
         {
             return _context.Clients.Any(e => e.Id == id);
         }
-    }
+
+		
+	}
 }

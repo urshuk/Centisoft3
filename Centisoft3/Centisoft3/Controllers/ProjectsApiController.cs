@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Centisoft3.Models;
+using Centisoft3.Helpers;
 
 namespace Centisoft3.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/projects")]
+	[ServiceFilter(typeof(TokenValidationAttribute))]
+	[ApiController]
     public class ProjectsApiController : ControllerBase
     {
         private readonly DataContext _context;

@@ -19,7 +19,7 @@ namespace Centisoft3.Controllers
         {
             _context = context;
         }
-
+        
         // GET: Clients
         public async Task<IActionResult> Index()
         {

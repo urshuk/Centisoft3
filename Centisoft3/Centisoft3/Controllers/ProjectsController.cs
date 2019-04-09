@@ -47,7 +47,7 @@ namespace Centisoft3.Controllers
         // GET: Projects/Create
         public IActionResult Create()
         {
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Id");
+            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
             return View();
         }
 

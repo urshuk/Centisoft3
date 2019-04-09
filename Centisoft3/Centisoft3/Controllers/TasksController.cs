@@ -48,8 +48,8 @@ namespace Centisoft3.Controllers
         // GET: Tasks/Create
         public IActionResult Create()
         {
-            ViewData["DeveloperId"] = new SelectList(_context.Developers, "Id", "Id");
-            ViewData["ProjectId"] = new SelectList(_context.Projects, "Id", "Id");
+            ViewData["DeveloperId"] = new SelectList(_context.Developers, "Id", "Name");
+            ViewData["ProjectId"] = new SelectList(_context.Projects, "Id", "Name");
             return View();
         }
 
